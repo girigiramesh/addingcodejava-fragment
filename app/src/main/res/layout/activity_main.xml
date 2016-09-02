@@ -74,14 +74,47 @@
         android:layout_toRightOf="@+id/btn_attach"
         android:text="Detach A" />
 
+    <Button
+        android:id="@+id/btn_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_detach"
+        android:layout_toRightOf="@+id/btn_detach"
+        android:text="POP add B" />
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_pop"
+        android:layout_toRightOf="@+id/btn_pop"
+        android:text="Back" />
+
     <LinearLayout
-        android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/btn_attach"
-        android:orientation="vertical">
+        android:layout_below="@+id/btn_attach">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ffeeee"
+            android:id="@+id/group"
+            android:layout_gravity="center"></LinearLayout>
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#eeeeff">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:id="@+id/message"/>
+        </ScrollView>
 
     </LinearLayout>
 
